@@ -56,12 +56,16 @@ Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mat
 
 Manual test: React project lists only react/vercel packs; Go project only go pack; new folder lists none.
 
-## Phase 4: Codex
-- [ ] Check Codex marketplace format vs `.claude-plugin/marketplace.json` (Matt's repo serves both → see how)
-- [ ] `codex plugin marketplace add Gvanns/gautier-skills`
-- [ ] Remove `~/.codex/skills` symlinks
+## Phase 4: Codex ✅
+- [x] Codex (0.167) reads `.claude-plugin/marketplace.json` directly (Matt's repo has only that). No extra manifest needed
+- [x] `codex plugin marketplace add gvannest/gautier-skills` → all packs listed
+- [x] Codex ignores `dependencies` → bundles install empty. In Codex, install upstream plugins directly instead of bundles
+- [x] Codex plugins are global (no per-project scope)
+- [x] Installed in Codex: design, react, mermaid, vercel (@gautier-skills); mattpocock-skills@claude-plugins-official; openai-security-best-practices + openai-security-ownership-map @skills-curated (marketplace added)
+- [x] Dead `~/.codex/skills` symlinks removed (Phase 3); Codex-only skill folders untouched
+- Caveat: vercel cache holds all 9 upstream skills; Codex may load all 9, not just the 4 listed. Not verified in a Codex session
 
-Manual test: Codex lists packs; skills run.
+Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 
 ## Phase 5: cloud setup script (experiment)
 - [ ] Repo commits `.claude/skill-packs` (one pack per line)

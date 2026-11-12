@@ -57,6 +57,17 @@ claude plugin marketplace add gvannest/gautier-skills
 claude plugin install design@gautier-skills --scope project
 ```
 
+## Codex
+
+Codex reads the same marketplace file:
+
+```bash
+codex plugin marketplace add gvannest/gautier-skills
+codex plugin add design@gautier-skills
+```
+
+Codex ignores plugin `dependencies`, so the bundle packs install empty there. Install the upstream plugin directly instead, such as `codex plugin add mattpocock-skills@claude-plugins-official`. Codex plugins apply everywhere, not per project.
+
 ## License
 
 MIT, except vendored files under `plugins/design/skills/gautier-design-slice/assets/review/vendor/`, which keep their own licenses.
