@@ -43,10 +43,16 @@ Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin in
 
 Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mattpocock-skills@claude-plugins-official`; one git-subdir pack installs and its skill loads.
 
-## Phase 3: per-project local config
-- [ ] Snippet for project `.claude/settings.json` (marketplace + enabled packs)
-- [ ] Roll out to one React project, one Go project
-- [ ] Remove replaced copies from `~/.agents/skills` (keep `codebase-memory`: managed by codebase-memory-mcp)
+## Phase 3: per-project local config ✅
+- [x] Snippet in README (marketplace + enabled packs + extra marketplaces table)
+- [x] How: `claude plugin marketplace add <repo> --scope <s>` per marketplace, then `claude plugin install <pack>@gautier-skills --scope <s>`. `local` scope writes gitignored `.claude/settings.local.json`
+- [x] React Native project, local: callstack, vercel, react, design, mermaid, pocock, playwright
+- [x] Go project, local: go, design, mermaid, pocock, security
+- [x] Notes repo, committed `.claude/settings.json`: pocock, mermaid
+- [x] Trashed all global copies from `~/.agents/skills` (kept `codebase-memory`, `synced`) + dangling `~/.codex/skills` links → `~/.Trash/skills-removed-2026-11-12`
+- [x] Checked: each project lists only its packs; empty folder lists none of ours (only pre-existing user plugins frontend-design, skill-creator)
+- Not done: other repos → add when next used
+- Codex has lost the trashed skills until Phase 4
 
 Manual test: React project lists only react/vercel packs; Go project only go pack; new folder lists none.
 
