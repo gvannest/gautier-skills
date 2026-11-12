@@ -69,11 +69,14 @@ Manual test: React project lists only react/vercel packs; Go project only go pac
 Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 
 ## Phase 5: cloud setup script (experiment)
-- [ ] Repo commits `.claude/skill-packs` (one pack per line)
-- [ ] Env setup script: clone gautier-skills (+ upstreams), copy listed skills into VM `~/.claude/skills`
-- [ ] One test session
+- Design change: setup script runs once per *environment* and is cached ~7 days, not per repo. So no `.claude/skill-packs` file; instead one cloud environment per profile (React Native / Go / Notes), chosen when starting a session
+- [x] `cloud/setup.sh`: reads `PACKS` + `EXTRA_MARKETPLACES`, `claude plugin marketplace add` (HTTPS URLs) + `install --scope user`, best effort, always exit 0, log at `~/.claude/gautier-skills-setup.log`
+- [x] `cloud/README.md`: paste-in script + profile table
+- [x] Local simulation with throwaway HOME: marketplaces added, packs + deps installed at user scope; missing `claude` CLI → exits 0 with log line
+- [ ] Create one environment at claude.ai/code with the Notes profile, start a session, check skills (user)
+- [ ] If OK: create React Native + Go environments
 
-Manual test: cloud session lists exactly the packs in `.claude/skill-packs`. Unknowns: script sees clone? VM `~/.claude/skills` loaded?
+Unknowns only a real cloud session answers: `claude` on PATH during setup? VM user-scope plugins load? GitHub clone allowed under Limited network?
 
 ## Phase 6: descriptions + manual-only
 - [ ] Scope in each own skill description
