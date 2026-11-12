@@ -4,28 +4,32 @@ Cloud sessions don't install plugins that a repo's `.claude/settings.json` enabl
 
 ## Set up an environment
 
-At claude.ai/code, add or edit an environment, open **Setup script**, and paste one of the profiles below. Keep network access at **Limited** (the default), which reaches GitHub.
+At claude.ai/code, add or edit an environment, open **Setup script**, and paste this. Change only the profile name on the last line. Keep network access at **Limited** (the default), which reaches GitHub.
 
 ```bash
 #!/bin/bash
-export PACKS="design mermaid pocock"
-export EXTRA_MARKETPLACES=""
 git clone --depth 1 https://github.com/gvannest/gautier-skills.git /tmp/gautier-skills || exit 0
-bash /tmp/gautier-skills/cloud/setup.sh
+PROFILE=notes bash /tmp/gautier-skills/cloud/setup.sh
 ```
 
-Profiles:
+## Profiles
 
-| Environment | `PACKS` | `EXTRA_MARKETPLACES` |
-|---|---|---|
-| React Native | `callstack vercel react design mermaid pocock impeccable` | `callstackincubator/agent-skills pbakaus/impeccable` |
-| Go | `go design mermaid pocock security` | `Facta-Dev/beautifulgo trailofbits/skills-curated` |
-| Notes | `pocock mermaid` | (empty) |
+Each profile is a file in [`profiles/`](profiles/) that lists its packs and the extra marketplaces those packs need. `claude-plugins-official` is always added.
+
+| `PROFILE` | Packs |
+|---|---|
+| `notes` | pocock, mermaid |
+| `react-native` | callstack, vercel, react, design, mermaid, pocock, impeccable |
+| `go` | go, design, mermaid, pocock, security |
+
+To add a profile, add a `profiles/<name>.env` file with `PACKS` and `EXTRA_MARKETPLACES`, then use that name in an environment.
 
 Leave out `github` and `playwright`: cloud sessions have their own GitHub access, and the Playwright MCP server needs a browser the VM may not have.
 
 ## Check it worked
 
-In a new session in that environment, run `/context` or ask Claude to list its skills. If packs are missing, ask Claude to show `~/.claude/gautier-skills-setup.log`.
+In a new session in that environment, ask Claude to list its skills. If packs are missing, ask Claude to show `~/.claude/gautier-skills-setup.log`.
 
-The setup script runs once per environment, then the result is cached for about seven days. After changing `PACKS`, save the environment again so the script reruns.
+## When a profile changes
+
+The setup script runs once per environment, and the result is cached for about seven days. A change to a profile file reaches an environment only when that cache is rebuilt. To rebuild it now, edit the environment's setup script (adding a comment such as `# v2` is enough), save, and start a new session.

@@ -1,18 +1,29 @@
 #!/bin/bash
 # Installs gautier-skills packs at user scope inside a Claude Code cloud VM.
-# A cloud environment's setup script sets PACKS (and EXTRA_MARKETPLACES when a
-# bundle needs one), then runs this file. See cloud/README.md.
+# A cloud environment's setup script sets PROFILE, then runs this file.
+# See cloud/README.md.
 #
-#   PACKS="design mermaid pocock"            packs from gautier-skills
-#   EXTRA_MARKETPLACES="Facta-Dev/beautifulgo" GitHub repos of extra marketplaces
+#   PROFILE=go    loads cloud/profiles/go.env, which sets:
+#     PACKS                packs from gautier-skills
+#     EXTRA_MARKETPLACES   GitHub repos of marketplaces some bundles need
 #
+# PACKS and EXTRA_MARKETPLACES can also be set directly instead of PROFILE.
 # Never fails the session: every step is best effort, and the log is kept at
 # ~/.claude/gautier-skills-setup.log.
 
 LOG="$HOME/.claude/gautier-skills-setup.log"
 mkdir -p "$HOME/.claude"
 exec >>"$LOG" 2>&1
-echo "== $(date -u +%FT%TZ) packs: ${PACKS:-<none>} extra: ${EXTRA_MARKETPLACES:-<none>}"
+
+if [ -n "$PROFILE" ]; then
+  PROFILE_FILE="$(dirname "$0")/profiles/$PROFILE.env"
+  if [ -f "$PROFILE_FILE" ]; then
+    . "$PROFILE_FILE"
+  else
+    echo "unknown profile: $PROFILE"
+  fi
+fi
+echo "== $(date -u +%FT%TZ) profile: ${PROFILE:-<none>} packs: ${PACKS:-<none>} extra: ${EXTRA_MARKETPLACES:-<none>}"
 
 CLAUDE="$(command -v claude)"
 if [ -z "$CLAUDE" ]; then
