@@ -22,7 +22,7 @@ Manual test: Claude Code + Codex list mermaid-diagrams; removed skills gone.
 - [x] Copy (not move) skills in; originals stay until Phase 3
 - [x] `claude plugin validate .` (marketplace + 3 packs pass)
 - [x] README + LICENSE (MIT)
-- [ ] Push to `gvannest/gautier-skills` (public; gh login is `gvannest`)
+- [x] Push to `gvannest/gautier-skills` (public; gh login is `gvannest`)
 
 Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin install design@gautier-skills`; skills listed with `design:` prefix.
 
