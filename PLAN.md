@@ -28,16 +28,18 @@ Manual test: Claude Code + Codex list mermaid-diagrams; removed skills gone.
 
 Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin install design@gautier-skills`; skills listed with `design:` prefix.
 
-## Phase 2: upstream bundles
-- [ ] `pocock` → dep `mattpocock-skills@claude-plugins-official`
-- [ ] `railway` → dep `railway@claude-plugins-official`
-- [ ] `security` → deps `openai-security-best-practices`, `openai-security-ownership-map` @ `skills-curated` (trailofbits/skills-curated, CC-BY-SA-4.0)
-- [ ] `playwright` → `git-subdir` microsoft/playwright-cli `skills/playwright-cli` (no Claude plugin upstream; needs `npm i -g @playwright/cli`)
-- [ ] `vercel` → no Claude plugin upstream (vercel-labs/agent-skills = `npx skills` only). `git-subdir` per skill: `skills/react-best-practices`, `skills/composition-patterns`, `skills/web-design-guidelines`, `skills/react-native-guidelines` (upstream renamed from vercel-react-native-skills). Skip vercel/vercel-plugin (38 skills + hooks + MCP + telemetry)
-- [ ] `callstack` → deps on marketplace `callstack-agent-skills` (callstackincubator/agent-skills): `building-react-native-apps`, `migrating-to-react-native`, `testing-react-native-apps` (github-actions). validate-skills + writing-user-docs dropped (trashed)
-- [ ] `go` → dep `beautiful-go@beautiful-go` (Facta-Dev/beautifulgo)
-- [ ] `allowCrossMarketplaceDependenciesOn`: `claude-plugins-official`, `skills-curated`, `callstack-agent-skills`, `beautiful-go`
-- [ ] Check: deps on non-default marketplaces need them registered too (project `extraKnownMarketplaces`?)
+## Phase 2: upstream bundles ✅
+- [x] `pocock` → dep `mattpocock-skills@claude-plugins-official` (27 skills)
+- [x] `railway` → dep `railway@claude-plugins-official`
+- [x] `security` → deps `openai-security-best-practices`, `openai-security-ownership-map` @ `skills-curated` (trailofbits/skills-curated, CC-BY-SA-4.0)
+- [x] `playwright-cli` → `git-subdir` microsoft/playwright-cli `skills/playwright-cli` (named `playwright-cli` to avoid clash with official `playwright` = Playwright MCP)
+- [x] `vercel` → one `git-subdir` of vercel-labs/agent-skills `skills/` + entry `skills` list: react-best-practices, composition-patterns, react-native-skills (real upstream folder name), web-design-guidelines. Skip vercel/vercel-plugin (38 skills + hooks + MCP + telemetry)
+- [x] `callstack` → deps on `callstack-agent-skills`: building-react-native-apps, migrating-to-react-native, testing-react-native-apps. validate-skills + writing-user-docs dropped (trashed)
+- [x] `go` → dep `beautiful-go@beautiful-go` (3 skills: go-best-practices, go-port, go-review)
+- [x] `allowCrossMarketplaceDependenciesOn`: `claude-plugins-official`, `skills-curated`, `callstack-agent-skills`, `beautiful-go`
+- [x] Checked: deps from non-registered marketplaces are skipped ("no marketplace you have added lists it"). Fix = declare them in project `extraKnownMarketplaces` (`claude plugin marketplace add <repo> --scope project`). `claude-plugins-official` is known by default.
+- [x] Install test (2026-11-12, scratch project): all 7 packs + deps enabled; vercel 4 skills, playwright-cli 1, pocock 27, go 3, callstack building 5. Uninstalled after.
+- Note: your local Pocock copies not in his plugin: git-guardrails-claude-code, loop-me, setup-pre-commit, setup-ts-deep-modules, writing-beats, writing-fragments, writing-shape → decide in Phase 3
 
 Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mattpocock-skills@claude-plugins-official`; one git-subdir pack installs and its skill loads.
 
