@@ -46,6 +46,11 @@ Leave out `github` and `playwright`: cloud sessions have their own GitHub access
 
 In a new session in that environment, ask Claude to list its skills. If packs are missing, ask Claude to show `~/.claude/gautier-skills-setup.log`.
 
-## When a profile changes
+## When a skill or profile changes
 
-The setup script runs once per environment, and the result is cached for about seven days. A change to a profile file reaches an environment only when that cache is rebuilt. To rebuild it now, edit the environment's setup script (adding a comment such as `# v2` is enough), save, and start a new session.
+The setup script installs whatever is on `main` when it runs. It runs once per environment, and the result is cached for about seven days. So a pushed change, to a skill or to a profile file, reaches an environment when that cache is rebuilt:
+
+- **On its own**: within about seven days, when the cache expires.
+- **Now**: edit the environment's setup script (bumping a comment such as `# v2` to `# v3` is enough), save, and start a new session.
+
+Updating inside a running session doesn't help: the next session starts again from the cached setup.

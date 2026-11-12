@@ -59,6 +59,13 @@ claude plugin marketplace add gvannest/gautier-skills
 claude plugin install design@gautier-skills --scope project
 ```
 
+## Updating
+
+Packs don't pin a `version`, so each push to `main` is a new version.
+
+- **Local**: add `"autoUpdate": true` to each marketplace under `extraKnownMarketplaces`, and Claude Code updates packs in the background, applied on `/reload-plugins` or the next session. To update right away: `claude plugin marketplace update gautier-skills`, then `claude plugin update <pack>@gautier-skills --scope <scope>`.
+- **Cloud**: see [cloud/README.md](cloud/README.md#when-a-profile-changes). Environments pick up new commits when their setup reruns.
+
 ## Codex
 
 Codex reads the same marketplace file:
