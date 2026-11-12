@@ -1,0 +1,23 @@
+{
+  "name": "callstack",
+  "version": "0.1.0",
+  "description": "Bundle: Callstack's React Native skills (building, migrating, testing).",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "building-react-native-apps",
+      "marketplace": "callstack-agent-skills"
+    },
+    {
+      "name": "migrating-to-react-native",
+      "marketplace": "callstack-agent-skills"
+    },
+    {
+      "name": "testing-react-native-apps",
+      "marketplace": "callstack-agent-skills"
+    }
+  ]
+}

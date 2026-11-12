@@ -1,0 +1,15 @@
+{
+  "name": "pocock",
+  "version": "0.1.0",
+  "description": "Bundle: Matt Pocock's engineering and productivity skills, from Anthropic's official marketplace.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "mattpocock-skills",
+      "marketplace": "claude-plugins-official"
+    }
+  ]
+}

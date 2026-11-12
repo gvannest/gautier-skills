@@ -1,0 +1,19 @@
+{
+  "name": "security",
+  "version": "0.1.0",
+  "description": "Bundle: OpenAI's security-best-practices and security-ownership-map skills, as converted by Trail of Bits.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "openai-security-best-practices",
+      "marketplace": "skills-curated"
+    },
+    {
+      "name": "openai-security-ownership-map",
+      "marketplace": "skills-curated"
+    }
+  ]
+}

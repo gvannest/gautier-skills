@@ -1,0 +1,15 @@
+{
+  "name": "go",
+  "version": "0.1.0",
+  "description": "Bundle: Beautiful Go idiomatic Go skill.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "beautiful-go",
+      "marketplace": "beautiful-go"
+    }
+  ]
+}

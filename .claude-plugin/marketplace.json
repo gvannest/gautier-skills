@@ -1,7 +1,9 @@
 {
   "name": "gautier-skills",
   "description": "Gautier's agent skills, grouped into packs that each project enables on its own.",
-  "owner": { "name": "Gvanns" },
+  "owner": {
+    "name": "Gvanns"
+  },
   "plugins": [
     {
       "name": "design",
@@ -17,6 +19,61 @@
       "name": "mermaid",
       "source": "./plugins/mermaid",
       "description": "Choosing, writing and reviewing Mermaid diagrams."
+    },
+    {
+      "name": "pocock",
+      "source": "./plugins/pocock",
+      "description": "Bundle: Matt Pocock's engineering and productivity skills, from Anthropic's official marketplace."
+    },
+    {
+      "name": "railway",
+      "source": "./plugins/railway",
+      "description": "Bundle: Railway's official skills, from Anthropic's official marketplace."
+    },
+    {
+      "name": "security",
+      "source": "./plugins/security",
+      "description": "Bundle: OpenAI's security-best-practices and security-ownership-map skills, as converted by Trail of Bits."
+    },
+    {
+      "name": "callstack",
+      "source": "./plugins/callstack",
+      "description": "Bundle: Callstack's React Native skills (building, migrating, testing)."
+    },
+    {
+      "name": "go",
+      "source": "./plugins/go",
+      "description": "Bundle: Beautiful Go idiomatic Go skill."
+    },
+    {
+      "name": "playwright-cli",
+      "description": "Microsoft's playwright-cli skill, fetched from its repo. Needs: npm i -g @playwright/cli",
+      "source": {
+        "source": "git-subdir",
+        "url": "microsoft/playwright-cli",
+        "path": "skills/playwright-cli"
+      }
+    },
+    {
+      "name": "vercel",
+      "description": "Vercel's React, composition, React Native and web design skills, fetched from vercel-labs/agent-skills.",
+      "source": {
+        "source": "git-subdir",
+        "url": "vercel-labs/agent-skills",
+        "path": "skills"
+      },
+      "skills": [
+        "./react-best-practices",
+        "./composition-patterns",
+        "./react-native-skills",
+        "./web-design-guidelines"
+      ]
     }
+  ],
+  "allowCrossMarketplaceDependenciesOn": [
+    "claude-plugins-official",
+    "skills-curated",
+    "callstack-agent-skills",
+    "beautiful-go"
   ]
 }
