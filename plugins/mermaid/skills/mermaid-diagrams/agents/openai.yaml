@@ -1,0 +1,6 @@
+interface:
+  display_name: "Mermaid Diagrams"
+  short_description: "Choose and draw diagrams, incl. architecture views"
+  default_prompt: "Use $mermaid-diagrams to choose and create a diagram for what I need to explain, asking for clarification if needed."
+policy:
+  allow_implicit_invocation: true

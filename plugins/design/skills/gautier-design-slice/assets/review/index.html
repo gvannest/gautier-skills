@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document review</title><link rel="icon" href="data:,">
+  <script>document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';</script>
+  <link rel="stylesheet" href="/assets/review.css">
+  <script src="/assets/vendor/mermaid.tiny.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="identity"><span class="app-mark" aria-hidden="true">◫</span><div><strong id="filename">Document review</strong>
+      <span id="filepath" class="filepath"></span></div></div>
+    <div class="actions"><span id="phase" role="status">Opening…</span>
+      <button id="end">End review</button><button id="send" class="primary" disabled>Send comments <span id="count">0</span></button></div>
+  </header>
+  <div id="banner" role="alert" hidden></div>
+  <div class="workspace"><nav id="outline" aria-label="Document sections"></nav>
+    <main><div class="document-heading"><span id="revision">Review</span><button id="reload">Reload document</button></div>
+      <article id="document" aria-label="Reviewed document"></article></main>
+    <aside aria-label="Comments"><div class="aside-heading"><h2>Comments</h2><span id="comment-total">0</span></div>
+      <p class="hint">Highlight text, use + beside a paragraph, or click a diagram element.</p>
+      <div id="comments"></div><div id="empty"><span aria-hidden="true">⌁</span><h3>A question starts here</h3>
+        <p>Leave a few focused comments, then send them to your agent together.</p></div>
+      <p class="batch-note">Comments belong to this revision. The next revision starts clean.</p></aside></div>
+  <button id="selection-action" class="primary" hidden>Comment on selection</button>
+  <dialog id="composer" aria-labelledby="composer-title"><form id="comment-form"><div class="dialog-heading"><h2 id="composer-title">Add a comment</h2>
+    <button type="button" id="cancel" aria-label="Close comment">×</button></div>
+    <p id="target-meta" class="target-meta"></p><blockquote id="target-quote"></blockquote>
+    <label for="comment-text">Your comment</label><textarea id="comment-text" rows="5" maxlength="12000" required
+      placeholder="What should we clarify or change?"></textarea><p id="composer-error" role="alert"></p>
+    <div class="dialog-footer"><span>⌘ / Ctrl + Enter to save</span><button id="save-comment" class="primary">Save comment</button></div>
+  </form></dialog>
+  <dialog id="diagram-dialog" aria-label="Expanded diagram"><div class="dialog-heading"><h2>Diagram</h2><button id="close-diagram" aria-label="Close diagram">×</button></div>
+    <div class="diagram-tools"><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit</button>
+      <button id="zoom-in" aria-label="Zoom in">+</button><span>Click a node or edge to comment</span></div><div id="expanded-diagram"></div></dialog>
+  <script type="module" src="/assets/review.js"></script>
+</body>
+</html>

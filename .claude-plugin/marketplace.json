@@ -1,0 +1,22 @@
+{
+  "name": "gautier-skills",
+  "description": "Gautier's agent skills, grouped into packs that each project enables on its own.",
+  "owner": { "name": "Gvanns" },
+  "plugins": [
+    {
+      "name": "design",
+      "source": "./plugins/design",
+      "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice implementation."
+    },
+    {
+      "name": "react",
+      "source": "./plugins/react",
+      "description": "Core React correctness and design rules."
+    },
+    {
+      "name": "mermaid",
+      "source": "./plugins/mermaid",
+      "description": "Choosing, writing and reviewing Mermaid diagrams."
+    }
+  ]
+}

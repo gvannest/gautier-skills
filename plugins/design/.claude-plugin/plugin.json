@@ -1,0 +1,7 @@
+{
+  "name": "design",
+  "version": "0.1.0",
+  "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice implementation.",
+  "author": { "name": "Gvanns" },
+  "license": "MIT"
+}

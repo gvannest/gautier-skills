@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gautier Design Slice"
+  short_description: "Plan feature rounds or design one round into tasks"
+  default_prompt: "Use $gautier-design-slice with this feature idea or document path to select slice planning or round design and collaborate on the next agreed artifacts."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Workbench"
+  short_description: "Build an interactive, evidence-backed architecture map"
+  default_prompt: "Use $architecture-workbench to build an interactive architecture explorer for this project, at the requested application, bounded-context or use-case scope, with linked dependency, execution-flow and detailed data-model views, source evidence and review notes."

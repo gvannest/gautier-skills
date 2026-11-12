@@ -1,0 +1,7 @@
+{
+  "name": "react",
+  "version": "0.1.0",
+  "description": "Core React correctness and design rules.",
+  "author": { "name": "Gvanns" },
+  "license": "MIT"
+}

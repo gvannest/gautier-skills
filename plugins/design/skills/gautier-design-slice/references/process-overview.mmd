@@ -1,0 +1,23 @@
+---
+title: Design workflow · choose the starting point
+config:
+  theme: neutral
+  flowchart:
+    wrappingWidth: 260
+---
+flowchart TB
+    Input{"What are you designing?"}
+    Input -->|Feature idea or feature README| Plan["Slice planning<br/>Discuss the product goal and scope"]
+    Plan --> Agreement{"Developer agrees on rounds<br/>and their dependencies?"}
+    Agreement -->|Revise| Plan
+    Agreement -->|Yes| Handoff["Write the feature README and every round stub<br/>Metadata only · stop for handoff"]
+    Input -->|Specific round document| Check{"Round design<br/>All prerequisite designs done and clear of review?"}
+    Check -->|No| Stop["Explain the blocker and stop<br/>No document edits"]
+    Check -->|Yes| Round["Agree on the round design,<br/>then agree on the task breakdown"]
+    Round --> Finish["Write task files and the round task table<br/>Validate and mark the design round done"]
+    classDef decision fill:#e6edf6,stroke:#678099,color:#203950
+    classDef result fill:#e6efe4,stroke:#6c876e,color:#263f29
+    classDef blocked fill:#faeddc,stroke:#a17e55,color:#50391f
+    class Input,Agreement,Check decision
+    class Handoff,Finish result
+    class Stop blocked

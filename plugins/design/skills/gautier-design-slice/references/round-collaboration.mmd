@@ -1,0 +1,27 @@
+---
+title: Round design · from a document path to agreed tasks
+config:
+  theme: neutral
+---
+sequenceDiagram
+    actor H as Developer
+    participant A as Design agent
+    participant D as Design documents
+    H->>A: Open a specific round
+    A->>D: Read the feature README, round and recursive prerequisites
+    alt A prerequisite is unfinished or requires review
+        A-->>H: Name the blocker and stop without edits
+    else Prerequisites clear
+        loop Until the developer agrees on the design
+            A-->>H: Discuss the design, diagrams and test guarantees
+            H->>A: Request changes or approve the design
+        end
+        loop Until the developer agrees on the tasks
+            A-->>H: Propose task boundaries, order and dependencies
+            H->>A: Request changes or approve the breakdown
+        end
+        A->>D: Write the agreed design, task table and task files
+        A->>D: Validate scoped IDs, links and dependency order
+        A->>D: Mark the round done after validation succeeds
+        A-->>H: Hand off the design and tasks for implementation
+    end

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Gautier High-Level Design"
+  short_description: "Discuss consequential design decisions in a document"
+  default_prompt: "Use $gautier-high-level-design to design this scope with me, one decision at a time."
+policy:
+  allow_implicit_invocation: false

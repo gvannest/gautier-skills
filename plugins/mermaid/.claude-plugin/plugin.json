@@ -1,0 +1,7 @@
+{
+  "name": "mermaid",
+  "version": "0.1.0",
+  "description": "Choosing, writing and reviewing Mermaid diagrams.",
+  "author": { "name": "Gvanns" },
+  "license": "MIT"
+}
