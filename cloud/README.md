@@ -16,13 +16,27 @@ PROFILE=notes bash /tmp/gautier-skills/cloud/setup.sh
 
 Each profile is a file in [`profiles/`](profiles/) that lists its packs and the extra marketplaces those packs need. `claude-plugins-official` is always added.
 
-| `PROFILE` | Packs |
-|---|---|
-| `notes` | pocock, mermaid |
-| `react-native` | callstack, vercel, react, design, mermaid, pocock, impeccable |
-| `go` | go, design, mermaid, pocock, security |
+Core profiles hold what a kind of work always needs. Extras are single packs to add only where they help.
 
-To combine profiles, list them in quotes: `PROFILE="react-native go"` installs every pack from both, each once.
+| `PROFILE` | Packs | Kind |
+|---|---|---|
+| `go` | go, security, mermaid | core |
+| `react-native` | callstack, vercel, react, mermaid | core |
+| `notes` | pocock, mermaid | core |
+| `pocock` | pocock | extra |
+| `design` | design | extra |
+| `impeccable` | impeccable | extra |
+| `mermaid` | mermaid | extra |
+
+Combine them by listing names in quotes. Each pack installs once. Since an environment's packs are fixed, make one environment per combination you use, and pick it when you start a session:
+
+| Environment | `PROFILE` |
+|---|---|
+| Go | `"go"` |
+| Go + design | `"go design pocock"` |
+| React Native | `"react-native"` |
+| React Native + design | `"react-native impeccable design pocock"` |
+| Notes | `"notes"` |
 
 To add a profile, add a `profiles/<name>.env` file with `PACKS` and `EXTRA_MARKETPLACES`, then use that name in an environment.
 

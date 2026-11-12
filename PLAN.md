@@ -76,7 +76,9 @@ Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 - [x] Cloud test 1 (Notes env): `claude` on PATH during setup, GitHub clone OK, user-scope plugin loads (mermaid ✔). pocock failed: fresh VM doesn't know `claude-plugins-official` → setup.sh now always adds it (re-simulated OK)
 - [x] Cloud test 2: re-saved Notes env, new session → claude-plugins-official added; mattpocock-skills, pocock, mermaid all enabled; skills listed. Matt's `disable-model-invocation: true` skills (wayfinder, triage, to-spec…) don't show in the auto list but run via `/mattpocock-skills:<name>`
 - [x] Profiles moved into repo: `cloud/profiles/{notes,react-native,go}.env`; env script is 3 lines with `PROFILE=<name>`. Both new profiles simulated clean (RN 12 plugins, Go 9)
-- [ ] Create React Native + Go environments (user), switch Notes env to the 3-line script
+- [x] `PROFILE` accepts several names; packs deduped
+- [x] Profiles split into core (go, react-native, notes) + extras (pocock, design, impeccable, mermaid); one environment per combination (option A; per-session enable/disable rejected for now). Simulated: `go` → 6 plugins, `react-native impeccable design pocock` → 12
+- [ ] Create environments (user): Go, Go + design, React Native, React Native + design; switch Notes env to the 3-line script
 
 Unknowns only a real cloud session answers: `claude` on PATH during setup? VM user-scope plugins load? GitHub clone allowed under Limited network?
 
