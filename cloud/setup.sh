@@ -3,11 +3,13 @@
 # A cloud environment's setup script sets PROFILE, then runs this file.
 # See cloud/README.md.
 #
-#   PROFILE=go    loads cloud/profiles/go.env, which sets:
-#     PACKS                packs from gautier-skills
-#     EXTRA_MARKETPLACES   GitHub repos of marketplaces some bundles need
+#   PROFILE=go            loads cloud/profiles/go.env, which sets:
+#     PACKS                 packs from gautier-skills
+#     EXTRA_MARKETPLACES    GitHub repos of marketplaces some bundles need
+#   PROFILE="go notes"    loads several profiles and installs all their packs
 #
-# PACKS and EXTRA_MARKETPLACES can also be set directly instead of PROFILE.
+# PACKS and EXTRA_MARKETPLACES can also be set directly, alone or on top of
+# PROFILE.
 # Never fails the session: every step is best effort, and the log is kept at
 # ~/.claude/gautier-skills-setup.log.
 
@@ -15,14 +17,22 @@ LOG="$HOME/.claude/gautier-skills-setup.log"
 mkdir -p "$HOME/.claude"
 exec >>"$LOG" 2>&1
 
-if [ -n "$PROFILE" ]; then
-  PROFILE_FILE="$(dirname "$0")/profiles/$PROFILE.env"
+ALL_PACKS="$PACKS"
+ALL_EXTRA="$EXTRA_MARKETPLACES"
+for name in $PROFILE; do
+  PROFILE_FILE="$(dirname "$0")/profiles/$name.env"
   if [ -f "$PROFILE_FILE" ]; then
+    PACKS="" EXTRA_MARKETPLACES=""
     . "$PROFILE_FILE"
+    ALL_PACKS="$ALL_PACKS $PACKS"
+    ALL_EXTRA="$ALL_EXTRA $EXTRA_MARKETPLACES"
   else
-    echo "unknown profile: $PROFILE"
+    echo "unknown profile: $name"
   fi
-fi
+done
+# Drop duplicates, so a pack shared by two profiles installs once.
+PACKS="$(echo $ALL_PACKS | tr ' ' '\n' | awk 'NF && !seen[$0]++' | tr '\n' ' ')"
+EXTRA_MARKETPLACES="$(echo $ALL_EXTRA | tr ' ' '\n' | awk 'NF && !seen[$0]++' | tr '\n' ' ')"
 echo "== $(date -u +%FT%TZ) profile: ${PROFILE:-<none>} packs: ${PACKS:-<none>} extra: ${EXTRA_MARKETPLACES:-<none>}"
 
 CLAUDE="$(command -v claude)"

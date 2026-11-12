@@ -22,6 +22,8 @@ Each profile is a file in [`profiles/`](profiles/) that lists its packs and the 
 | `react-native` | callstack, vercel, react, design, mermaid, pocock, impeccable |
 | `go` | go, design, mermaid, pocock, security |
 
+To combine profiles, list them in quotes: `PROFILE="react-native go"` installs every pack from both, each once.
+
 To add a profile, add a `profiles/<name>.env` file with `PACKS` and `EXTRA_MARKETPLACES`, then use that name in an environment.
 
 Leave out `github` and `playwright`: cloud sessions have their own GitHub access, and the Playwright MCP server needs a browser the VM may not have.
