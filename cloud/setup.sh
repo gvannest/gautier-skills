@@ -21,7 +21,9 @@ if [ -z "$CLAUDE" ]; then
 fi
 
 # HTTPS URLs, not owner/repo shorthand: the VM has no SSH key for GitHub.
-for m in gvannest/gautier-skills $EXTRA_MARKETPLACES; do
+# A fresh VM doesn't know Anthropic's official marketplace, which several
+# bundles (pocock, railway, playwright, github) depend on, so add it too.
+for m in anthropics/claude-plugins-official gvannest/gautier-skills $EXTRA_MARKETPLACES; do
   "$CLAUDE" plugin marketplace add "https://github.com/$m.git" || true
 done
 for p in $PACKS; do

@@ -73,7 +73,8 @@ Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 - [x] `cloud/setup.sh`: reads `PACKS` + `EXTRA_MARKETPLACES`, `claude plugin marketplace add` (HTTPS URLs) + `install --scope user`, best effort, always exit 0, log at `~/.claude/gautier-skills-setup.log`
 - [x] `cloud/README.md`: paste-in script + profile table
 - [x] Local simulation with throwaway HOME: marketplaces added, packs + deps installed at user scope; missing `claude` CLI → exits 0 with log line
-- [ ] Create one environment at claude.ai/code with the Notes profile, start a session, check skills (user)
+- [x] Cloud test 1 (Notes env): `claude` on PATH during setup, GitHub clone OK, user-scope plugin loads (mermaid ✔). pocock failed: fresh VM doesn't know `claude-plugins-official` → setup.sh now always adds it (re-simulated OK)
+- [ ] Cloud test 2: re-save Notes env to bust cache, new session, pocock skills load
 - [ ] If OK: create React Native + Go environments
 
 Unknowns only a real cloud session answers: `claude` on PATH during setup? VM user-scope plugins load? GitHub clone allowed under Limited network?
