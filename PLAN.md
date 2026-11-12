@@ -39,7 +39,7 @@ Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin in
 - [x] `allowCrossMarketplaceDependenciesOn`: `claude-plugins-official`, `skills-curated`, `callstack-agent-skills`, `beautiful-go`
 - [x] Checked: deps from non-registered marketplaces are skipped ("no marketplace you have added lists it"). Fix = declare them in project `extraKnownMarketplaces` (`claude plugin marketplace add <repo> --scope project`). `claude-plugins-official` is known by default.
 - [x] Install test (2026-11-12, scratch project): all 7 packs + deps enabled; vercel 4 skills, playwright-cli 1, pocock 27, go 3, callstack building 5. Uninstalled after.
-- Note: your local Pocock copies not in his plugin: git-guardrails-claude-code, loop-me, setup-pre-commit, setup-ts-deep-modules, writing-beats, writing-fragments, writing-shape → decide in Phase 3
+- [x] Local Pocock copies not in his plugin (git-guardrails-claude-code, loop-me, setup-pre-commit, setup-ts-deep-modules, writing-beats, writing-fragments, writing-shape): unused → trashed
 
 Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mattpocock-skills@claude-plugins-official`; one git-subdir pack installs and its skill loads.
 
