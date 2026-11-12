@@ -1,6 +1,5 @@
 {
   "name": "railway",
-  "version": "0.1.0",
   "description": "Bundle: Railway's official skills, from Anthropic's official marketplace.",
   "author": {
     "name": "Gvanns"

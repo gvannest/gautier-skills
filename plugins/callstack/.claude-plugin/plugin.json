@@ -1,6 +1,5 @@
 {
   "name": "callstack",
-  "version": "0.1.0",
   "description": "Bundle: Callstack's React Native skills (building, migrating, testing).",
   "author": {
     "name": "Gvanns"
