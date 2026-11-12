@@ -1,6 +1,7 @@
 ---
 name: gautier-design-slice
 description: Collaboratively plan a feature into design rounds, or design a specific round and agree its atomic implementation tasks. Routes feature ideas and READMEs to slice planning, and round document paths to prerequisite-gated round design. Produces Markdown designs, not application implementation.
+disable-model-invocation: true
 ---
 
 # Gautier design slice
