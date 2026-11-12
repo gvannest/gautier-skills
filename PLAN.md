@@ -75,7 +75,8 @@ Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 - [x] Local simulation with throwaway HOME: marketplaces added, packs + deps installed at user scope; missing `claude` CLI → exits 0 with log line
 - [x] Cloud test 1 (Notes env): `claude` on PATH during setup, GitHub clone OK, user-scope plugin loads (mermaid ✔). pocock failed: fresh VM doesn't know `claude-plugins-official` → setup.sh now always adds it (re-simulated OK)
 - [x] Cloud test 2: re-saved Notes env, new session → claude-plugins-official added; mattpocock-skills, pocock, mermaid all enabled; skills listed. Matt's `disable-model-invocation: true` skills (wayfinder, triage, to-spec…) don't show in the auto list but run via `/mattpocock-skills:<name>`
-- [ ] If OK: create React Native + Go environments
+- [x] Profiles moved into repo: `cloud/profiles/{notes,react-native,go}.env`; env script is 3 lines with `PROFILE=<name>`. Both new profiles simulated clean (RN 12 plugins, Go 9)
+- [ ] Create React Native + Go environments (user), switch Notes env to the 3-line script
 
 Unknowns only a real cloud session answers: `claude` on PATH during setup? VM user-scope plugins load? GitHub clone allowed under Limited network?
 
