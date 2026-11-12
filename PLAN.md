@@ -22,7 +22,9 @@ Manual test: Claude Code + Codex list mermaid-diagrams; removed skills gone.
 - [x] Copy (not move) skills in; originals stay until Phase 3
 - [x] `claude plugin validate .` (marketplace + 3 packs pass)
 - [x] README + LICENSE (MIT)
-- [x] Push to `gvannest/gautier-skills` (public; gh login is `gvannest`)
+- [x] Push to `gvannest/gautier-skills` (public; gh login is `gvannest`; commits use noreply email)
+- [x] Install test (2026-11-12): marketplace add + `install --scope project` for design + mermaid in scratch project → enabled there (design lists 5 skills), disabled from other folders. Uninstalled after.
+- Note: `install --scope project` writes only `enabledPlugins`; Phase 3 must add `extraKnownMarketplaces` by hand so other machines find the marketplace.
 
 Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin install design@gautier-skills`; skills listed with `design:` prefix.
 
