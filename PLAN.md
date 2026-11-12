@@ -32,7 +32,7 @@ Manual test: `claude plugin marketplace add ~/gautier-skills`; `claude plugin in
 - [x] `pocock` → dep `mattpocock-skills@claude-plugins-official` (27 skills)
 - [x] `railway` → dep `railway@claude-plugins-official`
 - [x] `security` → deps `openai-security-best-practices`, `openai-security-ownership-map` @ `skills-curated` (trailofbits/skills-curated, CC-BY-SA-4.0)
-- [x] `playwright-cli` → `git-subdir` microsoft/playwright-cli `skills/playwright-cli` (named `playwright-cli` to avoid clash with official `playwright` = Playwright MCP)
+- [x] `playwright` → dep `playwright@claude-plugins-official` (Playwright MCP server). Replaced the earlier `playwright-cli` skill pack by choice (MCP over CLI)
 - [x] `vercel` → one `git-subdir` of vercel-labs/agent-skills `skills/` + entry `skills` list: react-best-practices, composition-patterns, react-native-skills (real upstream folder name), web-design-guidelines. Skip vercel/vercel-plugin (38 skills + hooks + MCP + telemetry)
 - [x] `callstack` → deps on `callstack-agent-skills`: building-react-native-apps, migrating-to-react-native, testing-react-native-apps. validate-skills + writing-user-docs dropped (trashed)
 - [x] `go` → dep `beautiful-go@beautiful-go` (3 skills: go-best-practices, go-port, go-review)

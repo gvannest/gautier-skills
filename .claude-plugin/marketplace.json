@@ -46,13 +46,9 @@
       "description": "Bundle: Beautiful Go idiomatic Go skill."
     },
     {
-      "name": "playwright-cli",
-      "description": "Microsoft's playwright-cli skill, fetched from its repo. Needs: npm i -g @playwright/cli",
-      "source": {
-        "source": "git-subdir",
-        "url": "microsoft/playwright-cli",
-        "path": "skills/playwright-cli"
-      }
+      "name": "playwright",
+      "source": "./plugins/playwright",
+      "description": "Bundle: Microsoft's Playwright MCP server (browser automation tools), from Anthropic's official marketplace."
     },
     {
       "name": "vercel",

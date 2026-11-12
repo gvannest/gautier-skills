@@ -1,0 +1,15 @@
+{
+  "name": "playwright",
+  "version": "0.1.0",
+  "description": "Bundle: Microsoft's Playwright MCP server (browser automation tools), from Anthropic's official marketplace.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "playwright",
+      "marketplace": "claude-plugins-official"
+    }
+  ]
+}
