@@ -23,6 +23,8 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `go` | `beautiful-go@beautiful-go` | `beautiful-go` → `Facta-Dev/beautifulgo` |
 | `playwright` | `playwright@claude-plugins-official` (Microsoft's Playwright MCP server) | none |
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
+| `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
+| `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
 
 A bundle installs its dependencies only when their marketplace is known, so declare the extra marketplace in the same settings file.
 

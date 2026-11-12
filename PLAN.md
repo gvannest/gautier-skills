@@ -51,6 +51,7 @@ Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mat
 - [x] Notes repo, committed `.claude/settings.json`: pocock, mermaid
 - [x] Trashed all global copies from `~/.agents/skills` (kept `codebase-memory`, `synced`) + dangling `~/.codex/skills` links → `~/.Trash/skills-removed-2026-11-12`
 - [x] Checked: each project lists only its packs; empty folder lists none of ours (only pre-existing user plugins frontend-design, skill-creator)
+- [x] Added later: `impeccable` bundle (dep `impeccable@impeccable`, marketplace pbakaus/impeccable) → React Native project; `github` bundle (dep `github@claude-plugins-official`) → all three projects
 - Not done: other repos → add when next used
 - Codex has lost the trashed skills until Phase 4
 
