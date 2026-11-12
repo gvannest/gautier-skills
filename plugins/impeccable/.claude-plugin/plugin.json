@@ -1,0 +1,15 @@
+{
+  "name": "impeccable",
+  "version": "0.1.0",
+  "description": "Bundle: Paul Bakaus's Impeccable frontend design skill.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "impeccable",
+      "marketplace": "impeccable"
+    }
+  ]
+}

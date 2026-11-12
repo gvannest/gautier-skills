@@ -64,12 +64,23 @@
         "./react-native-skills",
         "./web-design-guidelines"
       ]
+    },
+    {
+      "name": "impeccable",
+      "source": "./plugins/impeccable",
+      "description": "Bundle: Paul Bakaus's Impeccable frontend design skill."
+    },
+    {
+      "name": "github",
+      "source": "./plugins/github",
+      "description": "Bundle: GitHub's official MCP server, from Anthropic's official marketplace. Needs GITHUB_PERSONAL_ACCESS_TOKEN."
     }
   ],
   "allowCrossMarketplaceDependenciesOn": [
     "claude-plugins-official",
     "skills-curated",
     "callstack-agent-skills",
-    "beautiful-go"
+    "beautiful-go",
+    "impeccable"
   ]
 }

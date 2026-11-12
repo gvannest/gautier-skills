@@ -1,0 +1,15 @@
+{
+  "name": "github",
+  "version": "0.1.0",
+  "description": "Bundle: GitHub's official MCP server, from Anthropic's official marketplace. Needs GITHUB_PERSONAL_ACCESS_TOKEN.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "github",
+      "marketplace": "claude-plugins-official"
+    }
+  ]
+}
