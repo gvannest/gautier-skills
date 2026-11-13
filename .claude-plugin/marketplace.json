@@ -77,8 +77,18 @@
     },
     {
       "name": "postgres",
-      "source": "./plugins/postgres",
-      "description": "Bundle: Timescale's pg-aiguide (Postgres, PostGIS, pgvector, TimescaleDB skills plus a Postgres docs search MCP server)."
+      "description": "Timescale's pg-aiguide router skill (table design, migrations, schema exploration, hybrid and vector search, TimescaleDB, PostGIS as on-demand references) plus its Postgres docs search MCP server.",
+      "source": {
+        "source": "git-subdir",
+        "url": "timescale/pg-aiguide",
+        "path": "skills/postgres"
+      },
+      "mcpServers": {
+        "pg-aiguide": {
+          "type": "http",
+          "url": "https://mcp.tigerdata.com/docs?disable_mcp_skills=1"
+        }
+      }
     }
   ],
   "allowCrossMarketplaceDependenciesOn": [
@@ -86,7 +96,6 @@
     "skills-curated",
     "callstack-agent-skills",
     "beautiful-go",
-    "impeccable",
-    "aiguide"
+    "impeccable"
   ]
 }
