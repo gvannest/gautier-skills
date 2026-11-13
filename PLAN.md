@@ -53,6 +53,7 @@ Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mat
 - [x] Checked: each project lists only its packs; empty folder lists none of ours (only pre-existing user plugins frontend-design, skill-creator)
 - [x] Added later: `impeccable` bundle (dep `impeccable@impeccable`, marketplace pbakaus/impeccable) → React Native project; `github` bundle (dep `github@claude-plugins-official`) → all three projects
 - [x] Added later: `postgres` pack → Go project; cloud profile `postgres` (needs `mcp.tigerdata.com` allowed). First a bundle of all 11 pg-aiguide skills (~3.4k tok); now `git-subdir` of the whole `skills/` folder with entry `skills: ["./postgres"]` so only the router loads, + the docs MCP declared in the entry (~240–370 tok). The router's `references/` are symlinks to the sibling skill folders, so fetching only `skills/postgres` left them broken (fixed). The router holds 9 of the 10 topic skills as references; missing only `timescaledb-hyperfunctions` → add a `postgres-timescale` pack (depends on `postgres`) when TimescaleDB lands
+- [x] Added later: `context7` pack, own `.mcp.json` pointing at the anonymous `https://mcp.context7.com/mcp` (the official plugin's `?client=claude-code-plugin` URL returns 401 and needs OAuth, which every fresh cloud session would re-ask). Enabled in all three projects; added to every core cloud profile (needs `mcp.context7.com` allowed)
 - Not done: other repos → add when next used
 - Codex has lost the trashed skills until Phase 4
 

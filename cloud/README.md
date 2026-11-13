@@ -20,16 +20,16 @@ Core profiles hold what a kind of work always needs. Extras are single packs to 
 
 | `PROFILE` | Packs | Kind |
 |---|---|---|
-| `go` | go, security, mermaid | core |
-| `react-native` | callstack, vercel, react, mermaid | core |
-| `notes` | pocock, mermaid | core |
+| `go` | go, security, mermaid, context7 | core |
+| `react-native` | callstack, vercel, react, mermaid, context7 | core |
+| `notes` | pocock, mermaid, context7 | core |
 | `pocock` | pocock | extra |
 | `design` | design | extra |
 | `impeccable` | impeccable | extra |
 | `mermaid` | mermaid | extra |
 | `postgres` | postgres (pg-aiguide router skill + docs MCP server) | extra |
 
-A profile whose pack brings a remote MCP server needs that server's host in the environment's allowed domains, since **Limited** network access only reaches the default allowlist. For `postgres`, allow `mcp.tigerdata.com`.
+A profile whose pack brings a remote MCP server needs that server's host in the environment's allowed domains, since **Limited** network access only reaches the default allowlist. Every core profile includes `context7`, so allow `mcp.context7.com` in each environment; for `postgres`, also allow `mcp.tigerdata.com`.
 
 Combine them by listing names in quotes. Each pack installs once. Since an environment's packs are fixed, make one environment per combination you use, and pick it when you start a session:
 
