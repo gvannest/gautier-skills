@@ -8,14 +8,14 @@ disable-model-invocation: true
 
 - Follow the `engineering-design` skill's principles.
 - Split the work into tasks. Each task gets its own tests, and one commit once the tests, lint and typecheck pass.
-- Use your best judgment for decisions; don't stop to ask. Before each significant decision, name the discipline it belongs to (e.g. security, concurrency, API design, data modeling, UX), recall the established best practices an expert in that field would apply, then decide. Note each one for the report.
+- Use your best judgment for decisions; don't stop to ask. Before each significant decision, name the most specific field of expertise it belongs to, recall the established best practices an expert in that field would apply, then decide. Note each one for the report.
 
 ## Final report
 
 End with a concise report:
 
 1. **Implemented:** what was built, per commit.
-2. **Decisions:** significant choices you made alone, the discipline and best practice behind each, and why.
+2. **Decisions:** significant choices you made alone, the field and best practice behind each, and why.
 3. **Architecture:** a Mermaid diagram of what was added or changed.
 4. **Friction:** problems hit, what slowed you down, what you wish you had known to work faster and use fewer tokens.
 5. **Doc conflicts:** contradictions or discrepancies found in the instructions you read (skills, AGENTS.md, CLAUDE.md, project docs), with file paths and how you resolved each one.
