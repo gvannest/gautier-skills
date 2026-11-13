@@ -25,7 +25,7 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
-| `context7` | Upstash Context7 MCP server (up-to-date library docs) at the anonymous `https://mcp.context7.com/mcp`. Declared here rather than depending on `context7@claude-plugins-official`, whose URL requires an OAuth sign-in | none |
+| `context7` | Upstash Context7 MCP server (up-to-date library docs) at `https://mcp.context7.com/mcp`. Sends `CONTEXT7_API_KEY` when set (higher rate limits), anonymous otherwise. Declared here rather than depending on `context7@claude-plugins-official`, whose URL requires an OAuth sign-in | none |
 | `postgres` | Timescale's pg-aiguide `postgres` router skill (its topics load on demand: table design, migrations, schema exploration, hybrid and vector search, TimescaleDB, PostGIS) + docs search MCP server (`mcp.tigerdata.com`) | none |
 
 ## Adding a pack
@@ -79,6 +79,17 @@ Packs don't pin a `version`, so each push to `main` is a new version.
 
 - **Local**: add `"autoUpdate": true` to each marketplace under `extraKnownMarketplaces`, and Claude Code updates packs in the background, applied on `/reload-plugins` or the next session. To update right away: `claude plugin marketplace update gautier-skills`, then `claude plugin update <pack>@gautier-skills --scope <scope>`.
 - **Cloud**: see [cloud/README.md](cloud/README.md#when-a-profile-changes). Environments pick up new commits when their setup reruns.
+
+## Secrets for MCP packs
+
+Packs reference keys by variable name only; values never go in this repo.
+
+| Variable | Pack | Laptop | Cloud |
+|---|---|---|---|
+| `CONTEXT7_API_KEY` (optional) | context7 | `env` block of `~/.claude/settings.json` | environment's **Environment variables** |
+| `GITHUB_PERSONAL_ACCESS_TOKEN` | github | `env` block of `~/.claude/settings.json` | not used in cloud |
+
+The desktop app doesn't read shell files like `.zshrc`, so put laptop values in `~/.claude/settings.json`.
 
 ## Codex
 
