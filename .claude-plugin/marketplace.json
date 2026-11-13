@@ -96,7 +96,7 @@
     {
       "name": "context7",
       "source": "./plugins/context7",
-      "description": "Bundle: Upstash Context7 MCP server (up-to-date library docs), from Anthropic's official marketplace. Works anonymously; CONTEXT7_API_KEY raises rate limits."
+      "description": "Upstash Context7 MCP server (up-to-date library docs), anonymous endpoint: no sign-in needed, shared rate limits."
     }
   ],
   "allowCrossMarketplaceDependenciesOn": [
