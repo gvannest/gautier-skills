@@ -1,6 +1,6 @@
 {
   "name": "design",
-  "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice implementation.",
+  "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice and task implementation.",
   "author": {
     "name": "Gvanns"
   },
