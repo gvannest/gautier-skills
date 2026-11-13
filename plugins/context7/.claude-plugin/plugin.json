@@ -1,0 +1,14 @@
+{
+  "name": "context7",
+  "description": "Bundle: Upstash Context7 MCP server (up-to-date library docs), from Anthropic's official marketplace. Works anonymously; CONTEXT7_API_KEY raises rate limits.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "context7",
+      "marketplace": "claude-plugins-official"
+    }
+  ]
+}
