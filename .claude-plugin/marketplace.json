@@ -74,6 +74,11 @@
       "name": "github",
       "source": "./plugins/github",
       "description": "Bundle: GitHub's official MCP server, from Anthropic's official marketplace. Needs GITHUB_PERSONAL_ACCESS_TOKEN."
+    },
+    {
+      "name": "postgres",
+      "source": "./plugins/postgres",
+      "description": "Bundle: Timescale's pg-aiguide (Postgres, PostGIS, pgvector, TimescaleDB skills plus a Postgres docs search MCP server)."
     }
   ],
   "allowCrossMarketplaceDependenciesOn": [
@@ -81,6 +86,7 @@
     "skills-curated",
     "callstack-agent-skills",
     "beautiful-go",
-    "impeccable"
+    "impeccable",
+    "aiguide"
   ]
 }

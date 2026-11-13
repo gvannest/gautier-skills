@@ -1,0 +1,14 @@
+{
+  "name": "postgres",
+  "description": "Bundle: Timescale's pg-aiguide (Postgres, PostGIS, pgvector, TimescaleDB skills plus a Postgres docs search MCP server).",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "pg",
+      "marketplace": "aiguide"
+    }
+  ]
+}
