@@ -1,13 +1,13 @@
 ---
-name: gautier-implement-task
-description: Implement a task autonomously, one tested commit per subtask, then report back.
+name: gautier-implement-feature
+description: Implement a feature, component or other piece of work autonomously, split into tasks with one tested commit each, then report back.
 disable-model-invocation: true
 ---
 
-# Gautier implement task
+# Gautier implement feature
 
 - Follow the `engineering-design` skill's principles.
-- Split the work into subtasks. Each subtask gets its own tests, and one commit once the tests, lint and typecheck pass.
+- Split the work into tasks. Each task gets its own tests, and one commit once the tests, lint and typecheck pass.
 - Use your best judgment for decisions; don't stop to ask. Note each significant decision for the report.
 
 ## Final report
