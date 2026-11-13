@@ -8,7 +8,7 @@
     {
       "name": "design",
       "source": "./plugins/design",
-      "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice implementation."
+      "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, design implementation, feature implementation."
     },
     {
       "name": "react",

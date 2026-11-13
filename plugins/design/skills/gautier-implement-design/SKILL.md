@@ -1,10 +1,10 @@
 ---
-name: gautier-implement-slice
+name: gautier-implement-design
 description: Implement an agreed design document.
 disable-model-invocation: true
 ---
 
-# Gautier implement slice
+# Gautier implement design
 
 - Implement the design in the document whose path the user provided; if none was provided, ask for it.
 - When you start, set `status: implementing` in the design document's front matter.
