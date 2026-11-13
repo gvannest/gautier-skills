@@ -25,7 +25,7 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
-| `postgres` | `pg@aiguide`: Timescale's 11 Postgres skills + docs search MCP server (`mcp.tigerdata.com`) | `aiguide` → `timescale/pg-aiguide` |
+| `postgres` | Timescale's pg-aiguide `postgres` router skill (its topics load on demand: table design, migrations, schema exploration, hybrid and vector search, TimescaleDB, PostGIS) + docs search MCP server (`mcp.tigerdata.com`) | none |
 
 ## Adding a pack
 

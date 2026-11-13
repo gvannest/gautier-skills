@@ -52,7 +52,7 @@ Manual test: install `pocock@gautier-skills` → `claude plugin list` shows `mat
 - [x] Trashed all global copies from `~/.agents/skills` (kept `codebase-memory`, `synced`) + dangling `~/.codex/skills` links → `~/.Trash/skills-removed-2026-11-12`
 - [x] Checked: each project lists only its packs; empty folder lists none of ours (only pre-existing user plugins frontend-design, skill-creator)
 - [x] Added later: `impeccable` bundle (dep `impeccable@impeccable`, marketplace pbakaus/impeccable) → React Native project; `github` bundle (dep `github@claude-plugins-official`) → all three projects
-- [x] Added later: `postgres` bundle (dep `pg@aiguide`, marketplace timescale/pg-aiguide: 11 skills + remote docs MCP, ~3.4k tok always-on) → Go project; cloud profile `postgres` (needs `mcp.tigerdata.com` allowed)
+- [x] Added later: `postgres` pack → Go project; cloud profile `postgres` (needs `mcp.tigerdata.com` allowed). First a bundle of all 11 pg-aiguide skills (~3.4k tok); now only its `postgres` router skill via `git-subdir` + the docs MCP declared in the entry (~240–370 tok). The router holds 9 of the 10 topic skills as references; missing only `timescaledb-hyperfunctions` → add a `postgres-timescale` pack (depends on `postgres`) when TimescaleDB lands
 - Not done: other repos → add when next used
 - Codex has lost the trashed skills until Phase 4
 
