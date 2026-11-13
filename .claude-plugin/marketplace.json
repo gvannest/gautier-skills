@@ -8,7 +8,7 @@
     {
       "name": "design",
       "source": "./plugins/design",
-      "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice and feature implementation."
+      "description": "Technical and architecture design: design slices, high-level design, engineering design, architecture workbench, slice implementation."
     },
     {
       "name": "react",
@@ -96,7 +96,7 @@
     {
       "name": "context7",
       "source": "./plugins/context7",
-      "description": "Upstash Context7 MCP server (up-to-date library docs), anonymous endpoint: no sign-in needed, shared rate limits."
+      "description": "Upstash Context7 MCP server (up-to-date library docs). Sends CONTEXT7_API_KEY when set (higher rate limits), anonymous otherwise."
     }
   ],
   "allowCrossMarketplaceDependenciesOn": [

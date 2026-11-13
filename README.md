@@ -8,7 +8,7 @@ Own skills:
 
 | Pack | Skills |
 |---|---|
-| `design` | architecture-workbench, engineering-design, gautier-design-slice, gautier-high-level-design, gautier-implement-slice, gautier-implement-feature |
+| `design` | architecture-workbench, engineering-design, gautier-design-slice, gautier-high-level-design, gautier-implement-slice |
 | `react` | react-best-practices |
 | `mermaid` | mermaid-diagrams |
 
