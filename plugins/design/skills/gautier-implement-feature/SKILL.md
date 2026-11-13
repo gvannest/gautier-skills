@@ -19,4 +19,5 @@ End with a concise report:
 3. **Architecture:** a Mermaid diagram of what was added or changed.
 4. **Friction:** problems hit, what slowed you down, what you wish you had known to work faster and use fewer tokens.
 5. **Doc conflicts:** contradictions or discrepancies found in the instructions you read (skills, AGENTS.md, CLAUDE.md, project docs), with file paths and how you resolved each one.
-6. **Gates:** deterministic checks (tests, lint rules, type constraints, CI, hooks) that would stop the codebase and its functional and non-functional requirements from degrading.
+6. **Blocked access:** hosts or resources you tried to reach and couldn't (documentation, APIs, packages), and what you needed from them.
+7. **Gates:** deterministic checks (tests, lint rules, type constraints, CI, hooks) that would stop the codebase and its functional and non-functional requirements from degrading.
