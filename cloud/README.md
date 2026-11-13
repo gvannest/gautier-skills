@@ -27,6 +27,9 @@ Core profiles hold what a kind of work always needs. Extras are single packs to 
 | `design` | design | extra |
 | `impeccable` | impeccable | extra |
 | `mermaid` | mermaid | extra |
+| `postgres` | postgres (pg-aiguide skills + docs MCP server) | extra |
+
+A profile whose pack brings a remote MCP server needs that server's host in the environment's allowed domains, since **Limited** network access only reaches the default allowlist. For `postgres`, allow `mcp.tigerdata.com`.
 
 Combine them by listing names in quotes. Each pack installs once. Since an environment's packs are fixed, make one environment per combination you use, and pick it when you start a session:
 

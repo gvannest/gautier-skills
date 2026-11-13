@@ -25,6 +25,19 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
+| `postgres` | `pg@aiguide`: Timescale's 11 Postgres skills + docs search MCP server (`mcp.tigerdata.com`) | `aiguide` → `timescale/pg-aiguide` |
+
+## Adding a pack
+
+| The author publishes | Add to this repo |
+|---|---|
+| A Claude plugin in their own marketplace | A bundle: `plugins/<pack>/.claude-plugin/plugin.json` with `dependencies: [{name, marketplace}]`, an entry in `marketplace.json`, and their marketplace name in `allowCrossMarketplaceDependenciesOn` |
+| Skill folders only | A `marketplace.json` entry with a `git-subdir` source pointing at their folder |
+| Your own skill | The skill folder under `plugins/<pack>/skills/` |
+
+Then run `claude plugin validate .`, push, and add a `cloud/profiles/<pack>.env` if cloud sessions need it.
+
+MCP servers travel the same way: a plugin can carry them (as `github`, `playwright` and `postgres` do), or a pack can hold just a `.mcp.json`.
 
 A bundle installs its dependencies only when their marketplace is known, so declare the extra marketplace in the same settings file.
 
