@@ -1,9 +1,6 @@
 ---
 name: mermaid-diagrams
-description: >-
-  Use when the user asks to create, edit, review, or choose a diagram, including requests to visualize a process,
-  system, architecture, lifecycle, data model, timeline, or comparison, even without mentioning Mermaid.
-  Also use when explicitly invoked as $mermaid-diagrams.
+description: Use when the user asks to create, edit, review or choose a diagram, or to visualize a process, system, architecture, lifecycle, data model, timeline or comparison, even without mentioning Mermaid.
 ---
 
 # Mermaid diagrams

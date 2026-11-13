@@ -1,6 +1,6 @@
 ---
 name: gautier-high-level-design
-description: Use only when the user explicitly invokes gautier-high-level-design for a high-level technical design session.
+description: High-level technical design session for a scope, one decision at a time.
 disable-model-invocation: true
 ---
 

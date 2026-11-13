@@ -82,10 +82,10 @@ Manual test: open Codex, ask for mermaid diagram / React review → skill used.
 
 Unknowns only a real cloud session answers: `claude` on PATH during setup? VM user-scope plugins load? GitHub clone allowed under Limited network?
 
-## Phase 6: descriptions + manual-only
-- [ ] Scope in each own skill description
-- [ ] `disable-model-invocation: true` on niche own skills
-- [ ] Upstream skills untouched
+## Phase 6: descriptions + manual-only ✅
+- [x] Auto (model-invoked, description = trigger): engineering-design (+ "before writing code"), mermaid-diagrams (dropped Codex-only `$mermaid-diagrams` line), react-best-practices (unchanged: already routes Next.js → vercel, RN → callstack)
+- [x] Manual (`disable-model-invocation: true`, description = one-line human summary): architecture-workbench (newly manual: niche, always asked for by name), gautier-design-slice, gautier-high-level-design, gautier-implement-slice (dropped "use only when explicitly invoked", now a no-op)
+- [x] Upstream skills untouched
 
 Manual test: React session doesn't suggest RN skills; niche skills only via `/name`.
 

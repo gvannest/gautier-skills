@@ -1,6 +1,6 @@
 ---
 name: gautier-implement-slice
-description: Use only when the user explicitly invokes gautier-implement-slice to implement an agreed design document.
+description: Implement an agreed design document.
 disable-model-invocation: true
 ---
 

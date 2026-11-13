@@ -1,9 +1,7 @@
 ---
 name: architecture-workbench
-description: >-
-  Build or improve an interactive architecture explorer for a codebase, with nested modules and use cases,
-  directed dependencies, use-case execution flows, detailed data models, source evidence and architectural review notes.
-  Use for an explorable architecture artifact, rather than a static diagram alone.
+description: "Build or improve an interactive architecture explorer for a codebase: nested modules and use cases, dependencies, execution flows, data models, source evidence and review notes."
+disable-model-invocation: true
 ---
 
 # Architecture workbench
