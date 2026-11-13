@@ -1,5 +1,5 @@
 interface:
-  display_name: "Gautier Implement Slice"
+  display_name: "Gautier Implement Design"
   short_description: "Implement an agreed design document"
   default_prompt: "Use $gautier-implement-design to implement this design document."
 policy:
