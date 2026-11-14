@@ -20,7 +20,6 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `railway` | `railway@claude-plugins-official` | none |
 | `security` | `openai-security-best-practices`, `openai-security-ownership-map` from Trail of Bits | `skills-curated` → `trailofbits/skills-curated` |
 | `callstack` | Callstack's building, migrating and testing React Native plugins | `callstack-agent-skills` → `callstackincubator/agent-skills` |
-| `go` | `beautiful-go@beautiful-go` | `beautiful-go` → `Facta-Dev/beautifulgo` |
 | `playwright` | `playwright@claude-plugins-official` (Microsoft's Playwright MCP server) | none |
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
@@ -52,14 +51,14 @@ Add to the project's `.claude/settings.json`, keeping only the packs it needs:
     "gautier-skills": {
       "source": { "source": "github", "repo": "gvannest/gautier-skills" }
     },
-    "beautiful-go": {
-      "source": { "source": "github", "repo": "Facta-Dev/beautifulgo" }
+    "skills-curated": {
+      "source": { "source": "github", "repo": "trailofbits/skills-curated" }
     }
   },
   "enabledPlugins": {
     "design@gautier-skills": true,
     "mermaid@gautier-skills": true,
-    "go@gautier-skills": true
+    "security@gautier-skills": true
   }
 }
 ```

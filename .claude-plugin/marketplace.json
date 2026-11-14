@@ -41,11 +41,6 @@
       "description": "Bundle: Callstack's React Native skills (building, migrating, testing)."
     },
     {
-      "name": "go",
-      "source": "./plugins/go",
-      "description": "Bundle: Beautiful Go idiomatic Go skill."
-    },
-    {
       "name": "playwright",
       "source": "./plugins/playwright",
       "description": "Bundle: Microsoft's Playwright MCP server (browser automation tools), from Anthropic's official marketplace."
@@ -103,7 +98,6 @@
     "claude-plugins-official",
     "skills-curated",
     "callstack-agent-skills",
-    "beautiful-go",
     "impeccable"
   ]
 }

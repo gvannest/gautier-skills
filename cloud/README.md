@@ -20,7 +20,7 @@ Core profiles hold what a kind of work always needs. Extras are single packs to 
 
 | `PROFILE` | Packs | Kind |
 |---|---|---|
-| `go` | go, security, mermaid, context7 | core |
+| `go` | security, mermaid, context7 | core |
 | `react-native` | callstack, vercel, react, mermaid, context7 | core |
 | `notes` | pocock, mermaid, context7 | core |
 | `pocock` | pocock | extra |
