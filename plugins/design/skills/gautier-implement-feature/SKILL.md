@@ -9,6 +9,7 @@ disable-model-invocation: true
 - Follow the `engineering-design` skill's principles.
 - Split the work into tasks. Each task gets its own tests, and one commit once the tests, lint and typecheck pass.
 - Use your best judgment for decisions; don't stop to ask. Before each significant decision, name the most specific field of expertise it belongs to, recall the established best practices an expert in that field would apply, then decide. Note each one for the report.
+- If the task involves UI work, test it once done by opening and maniuplating the UI, and record the screen to prove the feature is working as expected.
 
 ## Final report
 
