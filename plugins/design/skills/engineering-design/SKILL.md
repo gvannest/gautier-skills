@@ -1,6 +1,7 @@
 ---
 name: engineering-design
 description: Use when designing the technical solution or architecture of a feature, bug fix or refactoring, before writing code.
+disable-model-invocation: true
 ---
 
 # Engineering design
