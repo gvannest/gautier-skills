@@ -8,7 +8,7 @@ Own skills:
 
 | Pack | Skills |
 |---|---|
-| `design` | architecture-workbench, engineering-design, gautier-design-slice, gautier-high-level-design, gautier-implement-design, gautier-implement-feature |
+| `design` | architecture-workbench, engineering-design, gautier-high-level-design, gautier-implement-feature |
 | `react` | react-best-practices |
 | `mermaid` | mermaid-diagrams |
 
@@ -103,4 +103,4 @@ Codex ignores plugin `dependencies`, so the bundle packs install empty there. In
 
 ## License
 
-MIT, except vendored files under `plugins/design/skills/gautier-design-slice/assets/review/vendor/`, which keep their own licenses.
+MIT.
