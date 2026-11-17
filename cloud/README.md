@@ -26,6 +26,7 @@ Core profiles hold what a kind of work always needs. Extras are single packs to 
 | `pocock` | pocock | extra |
 | `design` | design | extra |
 | `impeccable` | impeccable | extra |
+| `pstack` | pstack | extra |
 | `mermaid` | mermaid | extra |
 | `postgres` | postgres (pg-aiguide router skill + docs MCP server) | extra |
 

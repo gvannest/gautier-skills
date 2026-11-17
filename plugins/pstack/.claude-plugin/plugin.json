@@ -1,0 +1,14 @@
+{
+  "name": "pstack",
+  "description": "Bundle: Lauren Tan's pstack workflow and engineering-principle skills and agents, from Cursor's marketplace.",
+  "author": {
+    "name": "Gvanns"
+  },
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "pstack",
+      "marketplace": "cursor-plugins"
+    }
+  ]
+}

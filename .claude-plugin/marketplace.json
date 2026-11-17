@@ -66,6 +66,11 @@
       "description": "Bundle: Paul Bakaus's Impeccable frontend design skill."
     },
     {
+      "name": "pstack",
+      "source": "./plugins/pstack",
+      "description": "Bundle: Lauren Tan's pstack workflow and engineering-principle skills and agents, from Cursor's marketplace."
+    },
+    {
       "name": "github",
       "source": "./plugins/github",
       "description": "Bundle: GitHub's official MCP server, from Anthropic's official marketplace. Needs GITHUB_PERSONAL_ACCESS_TOKEN."
@@ -98,6 +103,7 @@
     "claude-plugins-official",
     "skills-curated",
     "callstack-agent-skills",
-    "impeccable"
+    "impeccable",
+    "cursor-plugins"
   ]
 }

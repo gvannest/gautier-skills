@@ -23,6 +23,7 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `playwright` | `playwright@claude-plugins-official` (Microsoft's Playwright MCP server) | none |
 | `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
+| `pstack` | `pstack@cursor-plugins` (Lauren Tan's workflow + engineering-principle skills and agents) | `cursor-plugins` → `cursor/plugins` |
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
 | `context7` | Upstash Context7 MCP server (up-to-date library docs) at `https://mcp.context7.com/mcp`. Sends `CONTEXT7_API_KEY` when set (higher rate limits), anonymous otherwise. Declared here rather than depending on `context7@claude-plugins-official`, whose URL requires an OAuth sign-in | none |
 | `postgres` | Timescale's pg-aiguide `postgres` router skill (its topics load on demand: table design, migrations, schema exploration, hybrid and vector search, TimescaleDB, PostGIS) + docs search MCP server (`mcp.tigerdata.com`) | none |
