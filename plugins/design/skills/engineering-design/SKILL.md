@@ -37,6 +37,8 @@ Scale the design discussion to the change.
   and tenant isolation. Map storage records and external payloads through adapter/service contracts into independent
   consumer models.
 - **Tracer bullets:** For large features, start with the thinnest valuable vertical slice crossing the relevant layers.
+- **CQS (Command-Query Separation)** is a method-design principle: a method should either mutate state (a command) or return data (a query), but not both. It is useful almost everywhere   because it makes APIs more predictable, reduces hidden side effects, and makes caching, testing, and authorization clearer.
+- **CQRS (Command-Query Responsibility Segregation)** applies that separation at the architectural level, using separate write/command and read/query models—potentially with separate  handlers, DTOs, or data stores. It is useful when reads and writes have very different needs, such as complex business rules on writes, specialized UI/reporting views, or independently scalable read traffic; it adds complexity and may introduce eventual consistency, so it should not be a default for simple CRUD systems.
 
 ## Verification alongside design
 
