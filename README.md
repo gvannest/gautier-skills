@@ -10,7 +10,7 @@ Own skills:
 |---|---|
 | `design` | architecture-workbench, engineering-design, gautier-high-level-design, gautier-implement-feature |
 | `react` | react-best-practices |
-| `mermaid` | mermaid-diagrams |
+| `mermaid` | mermaid-diagrams, plus a diagrams-first rule (see below) |
 
 Third-party skills, always fetched from their authors (nothing is copied here):
 
@@ -29,6 +29,17 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
 | `context7` | Upstash Context7 MCP server (up-to-date library docs) at `https://mcp.context7.com/mcp`. Sends `CONTEXT7_API_KEY` when set (higher rate limits), anonymous otherwise. Declared here rather than depending on `context7@claude-plugins-official`, whose URL requires an OAuth sign-in | none |
 | `postgres` | Timescale's pg-aiguide `postgres` router skill (its topics load on demand: table design, migrations, schema exploration, hybrid and vector search, TimescaleDB, PostGIS) + docs search MCP server (`mcp.tigerdata.com`) | none |
+
+### Diagrams-first rule
+
+The `mermaid` pack also carries two hooks ([`plugins/mermaid/hooks/`](plugins/mermaid/hooks/)) that tell the agent to explain with Mermaid diagrams first and use text only to support them. Short facts, code changes and yes/no answers are the exceptions.
+
+| Hook | When | What it injects |
+|---|---|---|
+| `SessionStart` | startup, resume, `/clear`, after compaction | the full rule |
+| `UserPromptSubmit` | every message you send | a one-line reminder, so the rule stays near the end of the context |
+
+The pack is enabled at user scope on the laptop, so the rule applies in every local repo. Every core cloud profile includes `mermaid`. Mermaid shows up as raw source in a plain terminal, so the rule suits the desktop app and claude.ai better than the bare CLI.
 
 ## Adding a pack
 
