@@ -47,7 +47,7 @@
     },
     {
       "name": "vercel",
-      "description": "Vercel's React, composition, React Native and web design skills, fetched from vercel-labs/agent-skills.",
+      "description": "Vercel's web skills: React/Next.js performance, composition and web design, fetched from vercel-labs/agent-skills.",
       "source": {
         "source": "git-subdir",
         "url": "vercel-labs/agent-skills",
@@ -56,9 +56,30 @@
       "skills": [
         "./react-best-practices",
         "./composition-patterns",
-        "./react-native-skills",
         "./web-design-guidelines"
       ]
+    },
+    {
+      "name": "vercel-react-native",
+      "description": "Vercel's React Native and composition skills, fetched from vercel-labs/agent-skills.",
+      "source": {
+        "source": "git-subdir",
+        "url": "vercel-labs/agent-skills",
+        "path": "skills"
+      },
+      "skills": [
+        "./react-native-skills",
+        "./composition-patterns"
+      ]
+    },
+    {
+      "name": "nextjs",
+      "description": "Official Next.js workflow skills (cache components, partial prefetching, bundle optimizer, dev loop), fetched from vercel/next.js.",
+      "source": {
+        "source": "git-subdir",
+        "url": "vercel/next.js",
+        "path": "skills"
+      }
     },
     {
       "name": "impeccable",

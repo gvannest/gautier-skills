@@ -21,7 +21,8 @@ Core profiles hold what a kind of work always needs. Extras are single packs to 
 | `PROFILE` | Packs | Kind |
 |---|---|---|
 | `go` | security, mermaid, context7 | core |
-| `react-native` | callstack, vercel, react, mermaid, context7 | core |
+| `react-native` | callstack, vercel-react-native, react, mermaid, context7 | core |
+| `react-nextjs` | vercel, nextjs, react, mermaid, context7 | core |
 | `notes` | pocock, mermaid, context7 | core |
 | `pocock` | pocock | extra |
 | `design` | design | extra |
@@ -40,6 +41,8 @@ Combine them by listing names in quotes. Each pack installs once. Since an envir
 | Go + design | `"go design pocock"` |
 | React Native | `"react-native"` |
 | React Native + design | `"react-native impeccable design pocock"` |
+| Next.js | `"react-nextjs"` |
+| Next.js + design | `"react-nextjs impeccable design pocock"` |
 | Notes | `"notes"` |
 
 To add a profile, add a `profiles/<name>.env` file with `PACKS` and `EXTRA_MARKETPLACES`, then use that name in an environment.

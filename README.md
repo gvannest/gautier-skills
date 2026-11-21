@@ -21,7 +21,9 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 | `security` | `openai-security-best-practices`, `openai-security-ownership-map` from Trail of Bits | `skills-curated` → `trailofbits/skills-curated` |
 | `callstack` | Callstack's building, migrating and testing React Native plugins | `callstack-agent-skills` → `callstackincubator/agent-skills` |
 | `playwright` | `playwright@claude-plugins-official` (Microsoft's Playwright MCP server) | none |
-| `vercel` | Vercel's react-best-practices, composition-patterns, react-native-skills, web-design-guidelines | none |
+| `vercel` | Vercel's web skills: react-best-practices (React/Next.js performance), composition-patterns, web-design-guidelines | none |
+| `vercel-react-native` | Vercel's react-native-skills, composition-patterns | none |
+| `nextjs` | Official Next.js workflow skills from `vercel/next.js/skills`: cache components and partial prefetching (adoption + optimizer), bundle optimizer, dev loop | none |
 | `impeccable` | `impeccable@impeccable` (Paul Bakaus's frontend design skill) | `impeccable` → `pbakaus/impeccable` |
 | `pstack` | `pstack@cursor-plugins` (Lauren Tan's workflow + engineering-principle skills and agents) | `cursor-plugins` → `cursor/plugins` |
 | `github` | `github@claude-plugins-official` (GitHub MCP server, needs `GITHUB_PERSONAL_ACCESS_TOKEN`) | none |
