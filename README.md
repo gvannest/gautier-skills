@@ -41,6 +41,14 @@ The `mermaid` pack also carries two hooks ([`plugins/mermaid/hooks/`](plugins/me
 
 The pack is enabled at user scope on the laptop, so the rule applies in every local repo. Every core cloud profile includes `mermaid`. Mermaid shows up as raw source in a plain terminal, so the rule suits the desktop app and claude.ai better than the bare CLI.
 
+An eval suite in [`plugins/mermaid/evals/`](plugins/mermaid/evals/) checks both sides of the rule: an explanation gets a Mermaid block, while a short fact, a yes/no answer, a commit message and a code edit don't. Rerun it after changing the rule:
+
+```bash
+claude plugin eval plugins/mermaid -j 8
+```
+
+Each case runs with and without the pack. Expect every case at 1.00 with the pack, and `explanation` at 0.00 without it: that gap is the hooks at work.
+
 ## Adding a pack
 
 | The author publishes | Add to this repo |
