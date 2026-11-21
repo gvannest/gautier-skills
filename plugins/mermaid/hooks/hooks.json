@@ -1,0 +1,20 @@
+{
+  "description": "Diagrams-first explanation rule: full rule at session start and after compaction, one-line reminder on every prompt.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/diagrams-first.sh\" session" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/diagrams-first.sh\" prompt" }
+        ]
+      }
+    ]
+  }
+}
