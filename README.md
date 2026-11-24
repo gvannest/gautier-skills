@@ -32,7 +32,7 @@ Third-party skills, always fetched from their authors (nothing is copied here):
 
 ### Diagrams-first rule
 
-The `mermaid` pack also carries two hooks ([`plugins/mermaid/hooks/`](plugins/mermaid/hooks/)) that tell the agent to explain with Mermaid diagrams first and use text only to support them. Short facts, code changes and yes/no answers are the exceptions.
+The `mermaid` pack also carries two hooks ([`plugins/mermaid/hooks/`](plugins/mermaid/hooks/)) that tell the agent to explain with Mermaid diagrams first and use text only to support them. Short facts, code changes and yes/no answers are the exceptions. The rule also makes the agent pick the diagram type from the question (sequence for interactions, state for lifecycles, Gantt for schedules, ER for data models, and so on) and load the `mermaid-diagrams` skill, instead of drawing a flowchart by default.
 
 | Hook | When | What it injects |
 |---|---|---|
@@ -41,7 +41,7 @@ The `mermaid` pack also carries two hooks ([`plugins/mermaid/hooks/`](plugins/me
 
 The pack is enabled at user scope on the laptop, so the rule applies in every local repo. Every core cloud profile includes `mermaid`. Mermaid shows up as raw source in a plain terminal, so the rule suits the desktop app and claude.ai better than the bare CLI.
 
-An eval suite in [`plugins/mermaid/evals/`](plugins/mermaid/evals/) checks both sides of the rule: an explanation gets a Mermaid block, while a short fact, a yes/no answer, a commit message and a code edit don't. Rerun it after changing the rule:
+An eval suite in [`plugins/mermaid/evals/`](plugins/mermaid/evals/) checks both sides of the rule: an explanation gets a Mermaid block, while a short fact, a yes/no answer, a commit message and a code edit don't. Two more cases check the type choice: an OAuth login gets a `sequenceDiagram`, a migration plan a `gantt`. Rerun it after changing the rule:
 
 ```bash
 claude plugin eval plugins/mermaid -j 8
